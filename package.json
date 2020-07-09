@@ -1,0 +1,99 @@
+{
+  "name": "myapp",
+  "version": "0.1.9",
+  "description": "This is an description",
+  "main": "public/electron.js",
+  "author": {
+    "email": "test@test.no"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
+    "electron": "^9.1.0",
+    "electron-builder": "^22.7.0",
+    "electron-packager": "^15.0.0",
+    "npm": "^6.14.6"
+  },
+  "scripts": {
+    "buildIntallers": "npm run-script react-build && npm run-script packaging ",
+    "react-build": "react-scripts build",
+    "packaging": "electron-builder"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "productName": "exsample"
+  },
+  "build": {
+    "linux": {
+      "target": [
+        {
+          "target": "deb",
+          "arch": [
+            "armv7l","x64","ia32"
+          ]
+        }
+
+
+      ],
+      "category": "Game"
+    },
+    "win": {
+
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64","ia32"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64","ia32"
+          ]
+        }
+
+
+      ]
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64","ia32"
+          ]
+        },
+        {
+          "target": "pkg",
+          "arch": [
+            "x64","ia32"
+          ]
+        }
+      ]
+    },
+    "files": [
+      "**/*",
+      "!src${/*}"
+    ]
+  },
+  "homepage": "./",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
