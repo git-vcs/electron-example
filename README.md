@@ -28,7 +28,7 @@ only the Linux installers(armv7l) is tested.
 # Todo:
 Make pipeline for generating all possible installers on github-actions.
 
-Make the electron app start an update changes in development mode.
+Make the electron app start and update changes in development mode.
 
 Sign windows executable. 
 
