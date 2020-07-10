@@ -1,6 +1,6 @@
 # electron-packager-example
 
-This is an electron example that builds installers for different machine architecture and opperations system with the help of the community made  [Electron-builder](https://github.com/electron-userland/electron-builder)
+This is an electron example that builds installers for different machine architecture and opperations system with the help of the community made  [Electron-builder](https://github.com/electron-userland/electron-builder) for react apps.
 
 This example builds for:
 Windows(32 bit and 64 bit)
@@ -28,9 +28,12 @@ only the Linux installers(armv7l) is tested.
 # Todo:
 Make pipeline for generating all possible installers on github-actions.
 
+Make the electron app start an update changes in development mode.
+
 Sign windows executable. 
 
 Test the different versions.
+
 
 
 
