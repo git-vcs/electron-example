@@ -27,7 +27,9 @@ only the Linux installers(armv7l) is tested.
 
 # Todo:
 Make pipeline for generating all possible installers on github-actions.
+
 Sign windows executable. 
+
 Test the different versions.
 
 
