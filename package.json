@@ -66,15 +66,10 @@
         {
           "target": "dmg",
           "arch": [
-            "x64","ia32"
-          ]
-        },
-        {
-          "target": "pkg",
-          "arch": [
-            "x64","ia32"
+            "x64"
           ]
         }
+
       ]
     },
     "files": [
