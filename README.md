@@ -17,7 +17,7 @@ However depending on your OS you may need to install extra dependencies.
 	  
 2. then type: electron-builder --linux deb --x64
 				    
-This make installer for linux diustrobutions with the .deb pakcage running 64-bit architecture.
+This make installer for linux distributions with the .deb pakcage running 64-bit architecture.
 For the full list of possible configurations see [Electron-builders website](https://www.electron.build/)
 
 
