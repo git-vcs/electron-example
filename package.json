@@ -7,10 +7,10 @@
     "email": "test@test.no"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.1",
+    "@testing-library/jest-dom": "^5.11.0",
+    "@testing-library/react": "^10.4.5",
+    "@testing-library/user-event": "^12.0.11",
+    "react": "16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
@@ -22,7 +22,8 @@
   "scripts": {
     "buildIntallers": "npm run-script react-build && npm run-script packaging ",
     "react-build": "react-scripts build",
-    "packaging": "electron-builder"
+    "packaging": "electron-builder",
+    "rpiInstaller": "npm run-script react-build && electron-builder --linux deb --armv7l "
   },
   "eslintConfig": {
     "extends": "react-app",
@@ -33,32 +34,31 @@
       "target": [
         {
           "target": "deb",
-           "arch": [
-            "armv7l","x64","ia32"
+          "arch": [
+            "armv7l",
+            "x64",
+            "ia32"
           ]
         }
-
-
       ],
       "category": "Game"
     },
     "win": {
-
       "target": [
         {
           "target": "nsis",
           "arch": [
-            "x64","ia32"
+            "x64",
+            "ia32"
           ]
         },
         {
           "target": "portable",
           "arch": [
-            "x64","ia32"
+            "x64",
+            "ia32"
           ]
         }
-
-
       ]
     },
     "mac": {
@@ -69,7 +69,6 @@
             "x64"
           ]
         }
-
       ]
     },
     "files": [
