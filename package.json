@@ -23,7 +23,8 @@
     "buildIntallers": "npm run-script react-build && npm run-script packaging ",
     "react-build": "react-scripts build",
     "packaging": "electron-builder",
-    "rpiInstaller": "npm run-script react-build && electron-builder --linux deb --armv7l "
+    "rpiInstaller": "npm run-script react-build && electron-builder --linux deb --armv7l ",
+    "buildWindwos":"npm run-script react-build && electron-builder --win portable"
   },
   "eslintConfig": {
     "extends": "react-app",
