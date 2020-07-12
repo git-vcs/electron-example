@@ -30,10 +30,10 @@ jobs:
     - run: npm run-script buildIntallers --if-present
     - run: npm run-script buildWindwos --if-present
     - run: ls dist
-    - run: mv dist/*.deb . 
-    - run: mv dist/*.exe .
-    - run: mv dist/*.dmg .
-    - run: zip installers *.deb *.exe *.dmg
+    - run: mv dist/*.deb . 2> /dev/null
+    - run: mv dist/*.exe . 2> /dev/null
+    - run: mv dist/*.dmg . 2> /dev/null
+    - run: zip installers *.deb *.exe *.dmg 2> /dev/null
     - run: ls dist
     - run: ls      
     - name: Create Release
