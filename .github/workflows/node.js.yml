@@ -30,7 +30,7 @@ jobs:
     - run: npm run-script buildIntallers --if-present
     - run: npm run-script buildWindwos --if-present
     - run: ls dist
-    - run: mv dist/*.deb . && mv dist/*.exe && mv dist/*.dmg 
+    - run: mv dist/*.deb . && mv dist/*.exe . && mv dist/*.dmg . 
     - run: zip installers *.deb *.exe *.dmg
     - run: ls dist
     - run: ls      
