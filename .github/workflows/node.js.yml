@@ -27,7 +27,8 @@ jobs:
     - run: npm ci
     - run: npm run-script buildIntallers --if-present
     - run: ls dist
-    - run: zip installers dist
+    - run: zip installers dist/
+    - run: ls
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
