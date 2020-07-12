@@ -28,6 +28,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run-script buildIntallers --if-present
+    - run: npm run-script buildWindwos --if-present
     - run: ls dist
     - run: zip installers dist/
     - run: ls dist
@@ -49,7 +50,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: my-installers.zip
+          asset_path: installers.zip
           asset_name: installers.zip
           asset_content_type: application/zip
     
