@@ -25,10 +25,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - run: sudo dpkg --add-architecture i386 && apt-get update && apt-get install wine32
     - run: npm ci
     - run: npm run-script buildIntallers --if-present
     - run: ls dist
-    - run: zip installers dist/*
+    - run: mv dist/*.deb . ; mv dist/*.exe; dist/*.dmg 
+    - run: zip installers *.deb *.exe *.dmg
     - run: ls dist
     - run: ls      
     - name: Create Release
